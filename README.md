@@ -1,7 +1,5 @@
 # SendRegistered MCP
 
-DRAFT for a future public plugin repository. Do not publish this repo or open a PR until Yoshua agrees.
-
 Send registered letters from your AI assistant. Quote a price, send a PDF and check delivery. You approve every letter before it is printed and handed to the post.
 
 ## Connect
@@ -36,7 +34,7 @@ On first connect, Cursor (and Claude, ChatGPT or Grok) asks you to sign in to Se
 - `get_quote` — price of one letter
 - `registered_mail_requirements` — whether a letter type must go by registered mail in DE, FR, BE, ES, CH, NL, GB or US
 
-These three tools are also available, without a token, at `/mcp/public`. Confirmed with a live `tools/list` call on 10 Nov 2026 (Amsterdam time).
+These three tools are also available, without a token, at `/mcp/public`.
 
 ### Send (`letters:write`)
 
@@ -64,7 +62,7 @@ Questions: support@sendregistered.com or https://sendregistered.com/contact
 
 ## Publisher
 
-SendRegistered (Inlef B.V.). Logo: `assets/logo.svg`, copied from the product repo path `public/brand/mark.svg`.
+SendRegistered (Inlef B.V.).
 
 ## License
 
