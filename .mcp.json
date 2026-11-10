@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sendregistered": {
+      "type": "http",
+      "url": "https://sendregistered.com/mcp"
+    }
+  }
+}

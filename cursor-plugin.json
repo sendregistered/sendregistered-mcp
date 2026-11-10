@@ -1,0 +1,14 @@
+{
+  "name": "sendregistered",
+  "displayName": "SendRegistered",
+  "version": "1.0.0",
+  "description": "Quote, send and track registered letters in Europe, the UK and the US from a PDF, with your approval before anything is posted.",
+  "author": {
+    "name": "SendRegistered"
+  },
+  "homepage": "https://sendregistered.com/developers/mcp",
+  "repository": "https://github.com/sendregistered/sendregistered-mcp",
+  "license": "MIT",
+  "keywords": ["sendregistered", "registered-mail", "mcp"],
+  "logo": "assets/logo.svg"
+}
