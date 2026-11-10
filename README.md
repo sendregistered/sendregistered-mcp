@@ -1,14 +1,22 @@
 # SendRegistered MCP
 
-Send registered letters from your AI assistant. Quote a price, send a PDF and check delivery. You approve every letter before it is printed and handed to the post.
+<img src="assets/logo.png" alt="SendRegistered" width="128" height="128">
 
-## Connect
+Official [SendRegistered](https://sendregistered.com) MCP server: quote, send and track registered letters with proof of delivery from your AI assistant. You approve every letter before it is printed and handed to the post.
 
-- OAuth MCP (sign-in required for sending and tracking): `https://sendregistered.com/mcp`
-- Public lookup (prices, products and registered-mail rules, no token): `https://sendregistered.com/mcp/public`
-- Docs, including an Add to Cursor button: https://sendregistered.com/developers/mcp
+## Install
 
-Cursor snippet (also valid in `.cursor/mcp.json` or `~/.cursor/mcp.json`):
+### Gemini CLI
+
+```bash
+gemini extensions install https://github.com/sendregistered/sendregistered-mcp
+```
+
+Restart Gemini CLI. On first use it asks you to sign in to SendRegistered (OAuth).
+
+### Cursor
+
+[Add to Cursor](cursor://anysphere.cursor-deeplink/mcp/install?name=sendregistered&config=eyJ1cmwiOiJodHRwczovL3NlbmRyZWdpc3RlcmVkLmNvbS9tY3AifQ==) opens Cursor with the server filled in. You can also paste this snippet into `.cursor/mcp.json` in a project, or into `~/.cursor/mcp.json`:
 
 ```json
 {
@@ -18,13 +26,36 @@ Cursor snippet (also valid in `.cursor/mcp.json` or `~/.cursor/mcp.json`):
 }
 ```
 
-Add to Cursor deeplink:
+Cursor then asks you to sign in.
+
+### Claude
+
+1. In Claude, open Settings, then Connectors, and choose Add custom connector.
+2. Name it SendRegistered and paste `https://sendregistered.com/mcp`.
+3. Choose Connect and sign in to SendRegistered.
+
+Works on claude.ai, the desktop app and mobile.
+
+### ChatGPT
+
+1. In ChatGPT, open Settings, then Apps and connectors, and add a custom connector.
+2. Paste `https://sendregistered.com/mcp` and choose OAuth as sign-in.
+3. Sign in to SendRegistered, then pick SendRegistered in a chat.
+
+### Other assistants
+
+Any client that supports a remote MCP server with OAuth can connect to:
 
 ```
-cursor://anysphere.cursor-deeplink/mcp/install?name=sendregistered&config=eyJ1cmwiOiJodHRwczovL3NlbmRyZWdpc3RlcmVkLmNvbS9tY3AifQ==
+https://sendregistered.com/mcp
 ```
 
-On first connect, Cursor (and Claude, ChatGPT or Grok) asks you to sign in to SendRegistered and to choose what the assistant may do.
+That endpoint is Streamable HTTP. Sign-in uses OAuth 2.1 with PKCE. Public lookups (prices, products and registered-mail rules, no token) are also available at `https://sendregistered.com/mcp/public`.
+
+On [Grok](https://grok.com/connectors), choose New Connector, then Custom, paste the URL and sign in.
+
+Docs: https://sendregistered.com/developers/mcp  
+OpenAPI: https://sendregistered.com/v1/openapi.json
 
 ## What the assistant can do
 

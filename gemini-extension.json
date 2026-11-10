@@ -1,0 +1,11 @@
+{
+  "name": "sendregistered",
+  "version": "1.0.0",
+  "description": "Official SendRegistered MCP server: send registered letters with proof of delivery from Gemini CLI.",
+  "mcpServers": {
+    "sendregistered": {
+      "httpUrl": "https://sendregistered.com/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}
